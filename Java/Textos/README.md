@@ -1,3 +1,5 @@
+# Tutorial Java
+
 # ♨ Módulo: strings em java
 
 ## 🧠 Oque você vai aprender aqui?
@@ -91,3 +93,117 @@ Ex:
     Use os dados primitivos quando tiver certeza que o valor não ultrapassára os delimitadores, caso passe, irá gerar erro. Caso não tenha certeza, use um dado primitivo um pouco maior!
 
   |  -- Obs: quanto maior for, mais consumirá memória. |
+
+# Tipos de dados Não primitivos
+
+    Dados primitivos são aqueles dados que sempre começam com a letra inicial minúscula, os não primitivos, são aqueles que começam com a letra inicial geralmente em maiúsculas.
+
+    Tipos de dados primitios:
+        Arrays e classes.
+
+# Conversão de tipo Java
+
+    Em Java, existem dois tipos de fundição:
+
+    Alargamento de fundição (automaticamente) - convertendo um tipo menor para um tamanho de fonte maior
+    | byte -> short -> char -> int -> long -> float -> double |
+
+    Estreitamento da fundição (manualmente) - convertendo um tipo maior para um tipo de tamanho menor
+    | double -> float -> long -> int -> char -> short -> byte |
+
+`Alargamento de fundição:`
+```java
+        public class Main {
+        public static void main(String[] args) {
+        int myInt = 9;
+        double myDouble = myInt; // Automaticamente e alargado a fundição da variável
+
+        System.out.println(myInt);      // Outputs 9
+        System.out.println(myDouble);   // Outputs 9.0
+        }
+    }
+``` 
+Repare que antes a variável tinha a descrição de INT, logo após foi atribuida outra descrisão DOUBLE. Com isso a descrisão da variável foi "Alargada".
+
+`Fundição de Extreitamento:`
+    A conversão de restrição deve ser feita manualmente, colocando o tipo entre parênteses na frente do valor:()
+
+```java
+    public class Main {
+    public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Mudança manual: de double para int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}
+```
+A descrisão da variável que antes era double, foi restrita para int após declarar a variável como int e adicionar a descrisão a frente com parenteses: ()
+
+`Exemplo real:`
+    Programa para calcular a porcentagem da pontuação de um usuário em relação à um jogo.
+
+```java
+    // Pontuação máxima do jogo é 500
+    int maxScore = 500;
+    
+    // Pontuação do jogador
+    int userScore = 423;
+
+    // Calculando a porcentagem da pontuação do usuário em relação à pontuação máxima do jogo.
+    float porcentagem = (float) userScore / maxScore *100.0f;
+
+    // Imprimindo o resultado
+    System.out.println("A porcetagem do usuário é " + porcentagem);
+```
+Neste caso acima foi aplicado o metodo de conversão de tipo.
+
+# Operadores Java
+
+    Os operadores são usados para executar operações em variáveis e valores.
+
+    Java divide os operadores nos seguintes grupos:
+
+    Operadores aritméticos
+    Operadores de atribuição
+    Operadores de comparação
+    Operadores lógicos
+    Operadores bit a bit
+
+`Operadores Aritméticos:`
+     
+    | Operadores |      Nomes      |
+    |-------------------------------
+    |      +     |     Adição      |
+    |      -     |    Subtração    |
+    |      *     |  Multiplicação  |
+    |      /     |    Divisão      |
+    |      %     |    Modulos      |
+    |     ++     |  Incrementação  |
+    |     --     |  Decrementação  |
+
+`Operadores de Atribuição:`
+
+    | Operador | Exemplo | Execução  |
+    |------------------------------- |
+    |    =     |  x = 5  |   x = 5   |
+    |    +=    |  x += 3 | x = x + 3 |
+    |    -=    |  x -= 3 | x = x - 3 |
+    |    *=    |  x *= 3 | x = x * 3 |
+    |    /=    |  x /= 3 | x = x / 4 |
+    |    %=    |  x %= 3 | x = x % 3 | 
+    |    &=    |  x &= 3 | x = x & 3 |
+    |    |=    |  x |= 3 | x = x | 3 |
+    |    ^=    |  x ^= 3 | x = x ^ 3 |
+    |   >>=    | x >>= 3 | x = x >> 3|
+    |   <<=    | x <<= 3 | x = x << 3|
+
+    | Operador  | Exemplo |      DEscrição     |
+    |------------------------------------------|
+    |    ==     | x == y  |      Indentico     |
+    |    !=     | x != y  |      Negação       |
+    |    >      | x > y   |      Maior que     |
+    |    <      | x < y   |      Menor que     |
+    |    >=     | x >= y  | Maior ou igual que |
+    |    <=     | x <= y  | Menor ou igual que |
