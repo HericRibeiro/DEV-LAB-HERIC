@@ -199,6 +199,8 @@ Neste caso acima foi aplicado o metodo de conversão de tipo.
     |   >>=    | x >>= 3 | x = x >> 3|
     |   <<=    | x <<= 3 | x = x << 3|
 
+`Operadores de comparação:`
+
     | Operador  | Exemplo |      DEscrição     |
     |------------------------------------------|
     |    ==     | x == y  |      Indentico     |
@@ -207,3 +209,45 @@ Neste caso acima foi aplicado o metodo de conversão de tipo.
     |    <      | x < y   |      Menor que     |
     |    >=     | x >= y  | Maior ou igual que |
     |    <=     | x <= y  | Menor ou igual que |
+
+`Operadores lógicos:`
+
+    | Operador |   Nome   |                    Descrição                      |     Exemplo      |
+    |    &&    | E lógico | Retorna true se amabas expressões for verdadeiras |  x < 5 && x < 10 |
+    |    ||    |Ou lógico | Retrona true se uma das expressões for verdadeira |  x < 5 || x < 4  |
+    |    !     |Não lógico| Inverte o resultado, se for true, retorna false   |!(x < 5 && x < 10)|
+    
+`Comprimento Corda:`
+
+    Uma string é um comprimento corda, contém metódos que podem executar certas operações em strings.
+
+    Por exemplo:
+        Um comprimento corda, pode ser econtrado no metódo:
+    
+```Exemplo prático:```
+
+  ```java
+   legth()
+
+    String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    System.out.println("The length of the txt string is: " + txt.length());
+    return Quantidade_de_Caracteres_da_Variável
+    26
+```   
+
+`Outro metódo:`
+```java
+        String txt = "Hello World";
+        System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD", retorna em letra maisúscula 
+        System.out.println(txt.toLowerCase());   // Outputs "hello world", retorna em letra minúscula
+```
+`Localizando um caractere de String:`
+
+    O método retorna o índice (a posição) da primeira ocorrência de um texto especificado em uma cadeia de caracteres (incluindo espaços em branco):
+    
+```java
+    indexOf()
+
+    String txt = "Please locate where 'locate' occurs!";
+    System.out.println(txt.indexOf("locate")); // Outputs 7
+```
